@@ -234,13 +234,13 @@ const Star = () => {
                 isRecording={isRecording}
                 videoSrc={
                   showVideo
-                    ? "https://res.cloudinary.com/dcd1jeldi/video/upload/v1725953708/rbykdqcq4ltnwyinwgz8.mp4"
-                    : "https://res.cloudinary.com/dcd1jeldi/video/upload/v1726729720/oxgouziecwwgn8wltxhs.mp4"
+                    ? "https://res.cloudinary.com/dcd1jeldi/video/upload/v1727323156/zwboitqayyenth2vbe1w.mp4"
+                    : "https://res.cloudinary.com/dcd1jeldi/video/upload/v1727323146/qlbjfh8qqdy6jk94lqti.mp4"
                 }
               />
               {/* User and Star Text Container */}
               {results && results.length > 0 && (
-                <div className="absolute bottom-0 left-0 right-0 h-[38%] bg-black bg-opacity-50 text-white z-20 flex flex-col justify-center items-center overflow-y-auto">
+                <div className="absolute bottom-0 left-0 right-0 h-[38%]  overflow-y-scroll bg-black bg-opacity-50 text-white z-20 flex flex-col justify-center items-center">
                   <div className="w-full h-full px-4 space-y-3">
                     {results.map((result: any, _: any) => {
                       const cleanResult = result.result.replace(
@@ -249,6 +249,7 @@ const Star = () => {
                       );
                       return (
                         <div
+                          key={result.id}
                           className={`w-full px-4 ${
                             result.status === "user"
                               ? "text-right"

@@ -6,7 +6,6 @@ const VideoRecorder = ({ videoSrc }: any) => {
         controls={false}
         className="rounded-lg max-w-xl mx-auto height-large width-large"
         style={{
-          border: "3px solid #293060",
           width: "600px",
           height: "750px",
           objectFit: "cover",
